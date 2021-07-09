@@ -1,7 +1,5 @@
 provider "aws" {
   region = "${var.region}"
-  version = "~> 1.0"
-  
 }
 
 data "aws_kms_alias" "kms_encryption" {
@@ -9,7 +7,7 @@ data "aws_kms_alias" "kms_encryption" {
 }
 
 resource "aws_glue_catalog_database" "aws_glue_database" {
-  name = "${var.app_name}-glue-database" {
+  name = "${var.app_name}-glue-database"
 }
 
 resource "aws_glue_catalog_table" "aws_glue_table" {
